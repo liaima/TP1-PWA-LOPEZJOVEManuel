@@ -18,5 +18,9 @@ services:
     volumes:
       - ./src/composer/cache:/root/.composer/cache:delegated
       - ./src/basic:/app:delegated
+    environment:
+      DDBB_NAME: pwa2019
+      DDBB_HOST: db
+      DDBB_PASSWORD: pwa123
     ports:
       - 8000:80
