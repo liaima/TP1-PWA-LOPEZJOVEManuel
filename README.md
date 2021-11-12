@@ -15,5 +15,5 @@
 
   - Asignar los permisos a las carpetas del repo:
   ```
-  sudo chmod -R 777 src/
+  chmod 777 src/app/runtime/ src/app/web/assets/
   ```
