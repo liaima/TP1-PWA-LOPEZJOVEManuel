@@ -1,0 +1,20 @@
+version: "3.1"
+
+services:
+  db:
+    ports:
+      - 4000:3306
+
+  app:
+    environment:
+      PRODUCCION: 0
+
+  myadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: db
+      PMA_PORT: 3306
+      PMA_USER: pwauser
+      PMA_PASSWORD: pwa123
+    ports:
+      - 8001:80
